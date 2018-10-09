@@ -16,7 +16,7 @@ if [ x${TEST_URL} != 'x' ] && [ x${BUCKET_NAME} != 'x' ] && [ x${ACCESS_KEY_ID} 
     RCODE=`curl -I -m 10 -o /dev/null -s -w %{http_code} ${TEST_URL}`
     if [ x${RCODE} = 'x200' ];then
      if [ -f ${TEST_FILE} ];then
-       cp ${TEST_FILE} /var/s3fs/test 
+       cp ${TEST_FILE} /var/s3fs/test/${HOSTNAME} 
      else 
        echo "test file is not exits"
      fi
