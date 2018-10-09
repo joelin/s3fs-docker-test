@@ -27,7 +27,6 @@ docker run -it -v /home/joelin/tm/s3fs:/data  \
       -e SECRET_ACCESS_KEY=h7GhxuBLTrlhVUyxSPUKUV8r/2EI4ngqJxD7iBdBYLhwluN30JaT3Q==   \
       -e S3_URL=http://172.17.0.1:8000/ \
       -e TEST_FILE=/data/testfile \
-      --cap-add SYS_ADMIN \
       --privileged \
       s3fstest
 ```
